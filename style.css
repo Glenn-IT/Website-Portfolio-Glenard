@@ -1391,3 +1391,38 @@ html[data-theme="dark"] .invert-dark {
 .footer-note a:hover {
   text-decoration: underline;
 }
+
+/* ==========================================================================
+   ACCESSIBILITY: REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .status-dot {
+    animation: none;
+  }
+
+  .portrait-card:hover .avatar-img,
+  .mini-social:hover,
+  .metric-cell:hover,
+  .skill-card:hover,
+  .project-item:hover,
+  .tech-badge-item:hover,
+  .btn-primary:hover,
+  .btn-accent:hover,
+  .btn-outline:hover {
+    transform: none;
+  }
+}
+
